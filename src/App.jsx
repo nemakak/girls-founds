@@ -14,7 +14,7 @@ export default function App() {
     { id: '2', name: 'Топ корсетный бежевый', price: '1 290 ₽', url: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c', wb: '87654321' }
   ];
 
-  const BACKEND_URL = "УКАЖИТЕ_ССЫЛКУ_НА_RENDER"; // Ссылка с Render без слеша на конце
+  const BACKEND_URL = "https://girls-founds.onrender.com"; 
 
   useEffect(() => {
     if (window.Telegram?.WebApp) {
@@ -49,7 +49,7 @@ export default function App() {
   };
 
   const handleShare = () => {
-    const botName = "ВАШ_БОТ_БЕЗ_СОБАЧКИ"; // Например: GirlsFindsBot
+    const botName = "GFstyleroom_bot"; // Например: GirlsFindsBot
     const refLink = `https://t.me/${botName}/app?startapp=ref_${user.tg_id}`;
     const text = "Смотри, какой крутой мини-апп с примеркой одежды! Заходи по моей ссылке ✨:";
     window.Telegram.WebApp.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(refLink)}&text=${encodeURIComponent(text)}`);
